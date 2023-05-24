@@ -18,10 +18,10 @@ const Friend=({friendId,name,subtitle,userPicturePath})=>{
  const main=palette.neutral.main;
  const medium=palette.neutral.medium;
 
-console.log("friends",friendId)
+console.log("friends",friends)
 const friend=friendId
-//  const isFriend =friends?.find((friend)=>friend._id ===friendId);
-const isFriend =true 
+ const isFriend =friends?.find((friend)=>friend._id ===friendId);
+// const isFriend =true 
 
  const patchFriend = async ()=>{
    const data ={
@@ -37,6 +37,7 @@ const isFriend =true
    
     }
     );
+    console.log("friends",response)
     // const data =await response.json();
     dispatch(setFriends({friends:response.data}))
  };
