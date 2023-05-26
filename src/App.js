@@ -1,6 +1,7 @@
 import { BrowserRouter, Navigate, Routes, Route } from "react-router-dom";
 import HomePage from "./scenes/homepage/index";
 import LoginPage from "./scenes/loginpage/index"
+import ProfilePage from "./scenes/profilePage";
 // import ProfilePage from "scenes/profilePage";
 import { useMemo } from "react";
 import { useSelector } from "react-redux";
@@ -26,10 +27,10 @@ function App() {
          
 
               />
-            {/* <Route
+            <Route
               path="/profile/:userId"
               element={isAuth ? <ProfilePage /> : <Navigate to="/" />}
-            /> */}
+            />
           </Routes>
         </ThemeProvider>
       </BrowserRouter>

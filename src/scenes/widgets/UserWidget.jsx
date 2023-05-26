@@ -44,7 +44,7 @@ const UserWidget = ({ userId, picturePath }) => {
   };
   useEffect(() => {
     getUser();
-  }, []);
+  }, [userId]);
   if (!user) {
     return null;
   }
